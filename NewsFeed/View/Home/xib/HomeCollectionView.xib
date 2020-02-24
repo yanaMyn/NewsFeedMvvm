@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="6zm-hP-4T0" customClass="HomeCollectionViewCell" customModule="NewsFeed" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="92"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z08-KS-lme">
+                    <rect key="frame" x="10" y="6" width="90" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="BdQ-is-uxN"/>
+                        <constraint firstAttribute="width" constant="90" id="xDO-vA-pHA"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvT-uV-r0Z">
+                    <rect key="frame" x="108" y="6" width="288" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2w-OU-Osz">
+                    <rect key="frame" x="108" y="58" width="40" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="Delete"/>
+                    <connections>
+                        <action selector="btnDeleteTapped:" destination="6zm-hP-4T0" eventType="touchUpInside" id="Zfa-CI-aRj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="hvT-uV-r0Z" firstAttribute="leading" secondItem="Z08-KS-lme" secondAttribute="trailing" constant="8" id="63F-ZA-aZK"/>
+                <constraint firstItem="I2w-OU-Osz" firstAttribute="leading" secondItem="Z08-KS-lme" secondAttribute="trailing" constant="8" id="8JO-Ml-v1V"/>
+                <constraint firstItem="hvT-uV-r0Z" firstAttribute="top" secondItem="ijs-YB-U63" secondAttribute="top" constant="6" id="N0a-g0-OEE"/>
+                <constraint firstItem="I2w-OU-Osz" firstAttribute="bottom" secondItem="Z08-KS-lme" secondAttribute="bottom" id="Qws-vw-DNk"/>
+                <constraint firstItem="Z08-KS-lme" firstAttribute="centerY" secondItem="ijs-YB-U63" secondAttribute="centerY" id="cmp-yN-S0V"/>
+                <constraint firstItem="Z08-KS-lme" firstAttribute="leading" secondItem="ijs-YB-U63" secondAttribute="leading" constant="10" id="fat-gg-5SL"/>
+                <constraint firstAttribute="trailing" secondItem="hvT-uV-r0Z" secondAttribute="trailing" constant="12" id="vTw-Jz-vil"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ijs-YB-U63"/>
+            <connections>
+                <outlet property="btnDelete" destination="I2w-OU-Osz" id="oQT-pX-q9s"/>
+                <outlet property="imgArticle" destination="Z08-KS-lme" id="aC7-i7-w29"/>
+                <outlet property="lblArticle" destination="hvT-uV-r0Z" id="Abn-oO-Y9Y"/>
+            </connections>
+            <point key="canvasLocation" x="-76.799999999999997" y="95.352323838080963"/>
+        </collectionReusableView>
+    </objects>
+</document>

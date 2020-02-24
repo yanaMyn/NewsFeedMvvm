@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeGridCollectionViewCell" id="IJf-ww-sbn" customClass="HomeGridCollectionViewCell" customModule="NewsFeed" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="179"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="385" height="179"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TLf-2P-1hk">
+                        <rect key="frame" x="108.5" y="13" width="168" height="104"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="168" id="Iyy-Bd-bOt"/>
+                            <constraint firstAttribute="height" constant="104" id="RXk-tq-Vac"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZO-7S-qzv">
+                        <rect key="frame" x="12" y="127" width="361" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="fR1-Qd-8Fw" firstAttribute="trailing" secondItem="9ZO-7S-qzv" secondAttribute="trailing" constant="12" id="0yB-cU-zrh"/>
+                <constraint firstItem="TLf-2P-1hk" firstAttribute="centerX" secondItem="fR1-Qd-8Fw" secondAttribute="centerX" id="BXR-gM-byu"/>
+                <constraint firstItem="9ZO-7S-qzv" firstAttribute="leading" secondItem="fR1-Qd-8Fw" secondAttribute="leading" constant="12" id="FtO-mV-O6T"/>
+                <constraint firstItem="9ZO-7S-qzv" firstAttribute="top" secondItem="TLf-2P-1hk" secondAttribute="bottom" constant="10" id="LyW-di-f7f"/>
+                <constraint firstItem="TLf-2P-1hk" firstAttribute="top" secondItem="IJf-ww-sbn" secondAttribute="top" constant="13" id="dtT-2z-kCN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fR1-Qd-8Fw"/>
+            <size key="customSize" width="385" height="179"/>
+            <connections>
+                <outlet property="imgArticle" destination="TLf-2P-1hk" id="HKg-QC-o7c"/>
+                <outlet property="lblArticle" destination="9ZO-7S-qzv" id="MBx-EZ-clb"/>
+            </connections>
+            <point key="canvasLocation" x="128.80000000000001" y="25.637181409295355"/>
+        </collectionViewCell>
+    </objects>
+</document>
